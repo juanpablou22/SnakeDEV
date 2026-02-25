@@ -119,7 +119,7 @@
 
     /* hero2  Se añade la clase hero para darle su propio estilo en el html*/
     #hero2 {
-      height: 235vh;
+      height: 275vh;
       display: flex;
       align-items: center;
       padding: 0 5%;
@@ -159,8 +159,10 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
+      gap: 2rem;
+      margin-top: 4rem;
+      max-width: 3000px;
+      margin-inline: auto;
     }
 
     .card {
@@ -376,6 +378,8 @@
         <div class="card reveal">
           <span class="card-icon">🌐</span>
           <h3>Páginas Web</h3>
+          <hr>
+          <br>
           <p>- PAGINA WEB basico <em style="color: white;">$400.000</em> </p>
           <br>
           <p>- PAGINA WEB PROFESSIONAL <em style="color: white;">$800.000</em></p>
@@ -385,8 +389,10 @@
         <!-- CARD DE SISTEMAS DE RESERVAS CON ESTILO DE LETRA EN LA MISMA CLASE -->
 
         <div class="card reveal">
-          <span class="card-icon">⚙️</span>
+          <span class="card-icon">📅</span>
           <h3>Sistemas de reservas</h3>
+          <hr>
+          <br>
           <p>Software de reservas (Local 1 dispositivo)
           <p><em style="color: white;">$250.000</em></p>
           </p>
@@ -395,47 +401,87 @@
           <p><em style="color: white;">$280.000</em></p>
           </p>
           <br>
-           <p>Software de reservas en WEB (Local 2 dispositivos)
+          <p>Software de reservas en WEB (Local 2 dispositivos)
           <p><em style="color: white;">$490.000</em></p>
           </p>
 
         </div>
-        <!-- ESTILOS PARA ELEMENTOS CAR -->
+        <!-- Termina seccionn de reservas  -->
 
         <div class="card reveal">
           <span class="card-icon">📄</span>
-          <h3>Facturación Electrónica</h3>
-          <p>Integración legal y automatizada para el control total de tus ventas.</p>
-        </div>
+          <h3 class="card-title">Sistemas POS</h3>
 
-        <div class="card reveal">
-          <span class="card-icon">🛒</span>
-          <h3>Tiendas Virtuales</h3>
-          <p>Plataformas E-commerce escalables con pasarelas de pago seguras.</p>
-        </div>
+          <p class="card-description">
+            Integración legal y automatizada para el control total de tus ventas.
+          </p>
 
+          <hr>
+          <br>
+          <!-- ESPACIADO DE LINEAS CON HR Y BR PARA TEXTOS -->
+
+          <p class="card-description">
+            <strong>Incluye (2 usuarios locales):</strong>
+            <br>
+            - Registro de ventas y pagos
+            <br>
+            - Inventario en tiempo real
+            <br>
+            - Facturación electrónica
+            <br>
+            - Control de caja
+            <br>
+            - Gestión de clientes
+            <br>
+            - Gestión de empleados
+          </p>
+          <br>
+
+          <p class="card-price">
+            <em style="color: white;">$470.000</em>
+          </p>
+        </div>
+        <!-- TERMINA CARTA DE SISTEMAS POS LINEA  411 A 443 -->
+        <!-- Se añaden etiquetas como br y HR Para el espaciado en textos y lineas  -->
+
+        <!-- CARTA DE LANDING PAGES -->
         <div class="card reveal">
           <span class="card-icon">🎯</span>
-          <h3>Landing Pages</h3>
-          <p>Páginas de aterrizaje de alto impacto enfocadas 100% en conversión.</p>
-        </div>
+          <h3 class="card-title">Landing Pages</h3>
 
-        <div class="card reveal">
-          <span class="card-icon">📅</span>
-          <h3>Sistemas de Reservas</h3>
-          <p>Gestión inteligente de citas y agendas para tu negocio o servicio.</p>
-        </div>
+          <p class="card-description">
+            <strong>Avanzada:</strong> Página informativa diseñada para destacar tu negocio y atraer más clientes a tu
+            entorno digital.
+            Incluye un espacio interactivo y un método de contacto rápido para facilitar la comunicación avanzada.
+          </p>
+          <p style="color: white;" class="card-price">
+            <em>$170.000</em>
+          </p>
+          <br>
 
-        <div class="card reveal">
-          <span class="card-icon">💻</span>
-          <h3>Sistemas POS</h3>
-          <p>Control eficiente de puntos de venta física y transacciones de caja.</p>
+          <hr>
+          <br>
+
+          <p class="card-description">
+            <strong>Básica:</strong> Página informativa interactiva con 4 secciones esenciales, ideal para el alcance de
+            negocios o como tarjeta digital.
+            Diseñada para ser clara y práctica, sin necesidad de modificaciones.
+          </p>
+          <p style="color: white;" class="card-price">
+            <em>$120.000</em>
+          </p>
         </div>
+        <!-- Ultima carta de landing pages  -->
+
       </div>
-
-
-    </div>
   </section>
+
+
+  <!-- TERMINA SECCION DE SERVICIOS  -->
+
+
+
+  <!-- INICIA SECCION DE CONTACTO DIRECTOS -->
 
 
   <section id="contacto">
@@ -481,3 +527,5 @@
 </body>
 
 </html>
+
+<!-- se termina la landing falta mas modificaciones -->
