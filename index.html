@@ -7,11 +7,13 @@
   <title>SnakeDev · Software Solutions</title>
 
   <link rel="icon" href="https://fav.farm/🐍" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap"
     rel="stylesheet" />
+
+
+  <!-- ESTILOS -->
   <style>
     :root {
       --snake-green: #8cf76b;
@@ -53,16 +55,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 5%;
-      background: rgba(5, 5, 5, 0.9);
+      padding: 1.2rem 5%;
+      background: rgba(5, 5, 5, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(140, 247, 107, 0.1);
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: -1px;
       text-decoration: none;
       color: white;
     }
@@ -80,67 +82,42 @@
     nav ul a {
       text-decoration: none;
       color: var(--text-gray);
-      font-size: 0.8rem;
+      font-size: .8rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      transition: 0.3s;
+      transition: .3s;
     }
 
     nav ul a:hover {
       color: var(--snake-green);
     }
 
-    /* Hero */
-    #hero {
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      padding: 0 5%;
-      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
-    }
-
-    h1 {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      line-height: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 em {
-      font-style: normal;
-      color: var(--snake-green);
-    }
-
-    .hero-tag {
-      color: var(--snake-green);
-      font-family: 'JetBrains Mono';
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    /* hero2  Se añade la clase hero para darle su propio estilo en el html*/
-    #hero2 {
-      height: 275vh;
-      display: flex;
-      align-items: center;
-      padding: 0 5%;
-      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
-      text-align: center;
-      /* Centramos titulo completo del h1 */
+    .Menu-toggle {
+      display: none;
       flex-direction: column;
-      justify-content: center;
+      cursor: pointer;
+      gap: 5px;
     }
 
-    h1 {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      line-height: 0.9;
-      margin-bottom: 1.5rem;
-
+    .Menu-toggle span {
+      width: 25px;
+      height: 2px;
+      background: white;
     }
 
-    h1 em {
-      font-style: normal;
-      color: var(--snake-green);
 
+    #hero {
+      min-height: 100vh;
+      background: var(--bg-black);
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
+    }                             
+
+    .hero-content {
+      max-width: 800px;                                                                             
     }
 
     .hero-tag {
@@ -148,29 +125,62 @@
       font-family: 'JetBrains Mono';
       margin-bottom: 1rem;
       display: block;
+      font-size: .9rem;
     }
 
-
-    /* Servicios */
-    #servicios {
-      padding: 80px 5%;
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1;
+      margin-bottom: 1.5rem;
     }
 
+    h1 em {
+      font-style: normal;
+      color: var(--snake-green);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 14px 28px;
+      border: 1px solid var(--snake-green);
+      color: var(--snake-green);
+      text-decoration: none;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .cta:hover {
+      background: var(--snake-green);
+      color: black;
+      box-shadow: 0 0 15px var(--snake-green);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* CARDS */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 4rem;
-      max-width: 3000px;
-      margin-inline: auto;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .card {
       background: var(--bg-card);
-      padding: 2.5rem;
-      border: 1px solid rgba(140, 247, 107, 0.1);
-      transition: 0.4s;
-      position: relative;
+      padding: 2rem;
+      border: 1px solid rgba(140, 247, 107, .1);
+      transition: .4s;
     }
 
     .card:hover {
@@ -178,27 +188,33 @@
       transform: translateY(-5px);
     }
 
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
     .card h3 {
       color: var(--snake-green);
       margin-bottom: 1rem;
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .card p {
       color: var(--text-gray);
-      font-size: 0.9rem;
+      font-size: .9rem;
+      margin-bottom: .8rem;
     }
 
-    /* Contacto */
+    .price {
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .price-info {
+      font-size: .8rem;
+      color: #666;
+    }
+
+    /* CONTACT */
     #contacto {
-      padding: 100px 5%;
       background: #080808;
       text-align: center;
     }
@@ -207,9 +223,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      margin-top: 4rem;
-      max-width: 1000px;
-      margin-inline: auto;
+      max-width: 900px;
+      margin: 3rem auto 0 auto;
     }
 
     .contact-card {
@@ -217,10 +232,9 @@
       padding: 2rem;
       border-left: 4px solid var(--snake-green);
       text-align: left;
-      transition: 0.3s;
       text-decoration: none;
       color: white;
-      display: block;
+      transition: .3s;
     }
 
     .contact-card:hover {
@@ -228,44 +242,77 @@
       transform: scale(1.02);
     }
 
-    .contact-card h4 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-card p {
-      color: var(--snake-green);
-      font-family: 'JetBrains Mono';
-      font-size: 1.1rem;
-    }
-
     .main-email {
       display: block;
-      margin-top: 4rem;
-      font-size: clamp(1.2rem, 4vw, 2.5rem);
-      color: white;
+      margin-top: 3rem;
+      font-size: clamp(1.2rem, 4vw, 2rem);
       text-decoration: none;
+      color: white;
       font-weight: 700;
-      transition: 0.3s;
     }
 
     .main-email:hover {
-      color: var(--snake-green);
-      text-shadow: 0 0 15px var(--snake-green);
+      color: var(--snake-green)
     }
 
     footer {
-      padding: 3rem;
+      padding: 2rem;
       text-align: center;
       color: #444;
       border-top: 1px solid #111;
     }
 
-    /* Reveal effect */
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      #hero {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      .contact-card {
+        text-align: center;
+      }
+
+    }
+
+    /* REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
-      transition: 0.6s ease-out;
+      transition: .6s ease;
     }
 
     .reveal.visible {
@@ -527,5 +574,3 @@
 </body>
 
 </html>
-
-<!-- se termina la landing falta mas modificaciones -->
