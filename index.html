@@ -29,9 +29,12 @@
       padding: 0;
     }
 
+    /* Desplazamiento para navegacion interactiva */
     html {
       scroll-behavior: smooth;
     }
+
+
 
     body {
       font-family: 'Space Grotesk', sans-serif;
@@ -113,6 +116,40 @@
       margin-bottom: 1rem;
       display: block;
     }
+
+    /* hero2  Se añade la clase hero para darle su propio estilo en el html*/
+    #hero2 {
+      height: 235vh;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
+      text-align: center;
+      /* Centramos titulo completo del h1 */
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--snake-green);
+
+    }
+
+    .hero-tag {
+      color: var(--snake-green);
+      font-family: 'JetBrains Mono';
+      margin-bottom: 1rem;
+      display: block;
+    }
+
 
     /* Servicios */
     #servicios {
@@ -242,6 +279,7 @@
     <a href="#" class="logo">SNAKE<span>DEV🐍</span></a>
     <ul>
       <li><a href="#servicios">Desarrollamos</a></li>
+      <li><a href="#hero2">Nuestros Servicios</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -316,7 +354,89 @@
       sistemas que no solo funcionan, sino que están optimizados para la conversión, estabilidad y escalabilidad a
       futuro.
     </p>
+
+    <br>
+    <br>
+    <br>
   </section>
+
+  <!-- SECTION DE PRECIOS CON TITULOS Y SUS RESPECTIVA INFORMACION POR CARD -->
+
+  <section id="hero2">
+    <div style="max-width: 900px;">
+      <br>
+      <br>
+      <h1 class="reveal">Nuestros Servicios de <em>Snake</em> para tu Negocio.</h1>
+      <br>
+      <!-- Lista de Card con estilo propio -->
+      <div class="services-grid">
+
+        <!-- CARD DE PRECIOS DE PAGINAS WEB -->
+
+        <div class="card reveal">
+          <span class="card-icon">🌐</span>
+          <h3>Páginas Web</h3>
+          <p>- PAGINA WEB basico <em style="color: white;">$400.000</em> </p>
+          <br>
+          <p>- PAGINA WEB PROFESSIONAL <em style="color: white;">$800.000</em></p>
+          <br>
+          <P>- PAGINA WEB PROFESSIONAL<Em style="color: white;"> $1.000.000</Em> </P>
+        </div>
+        <!-- CARD DE SISTEMAS DE RESERVAS CON ESTILO DE LETRA EN LA MISMA CLASE -->
+
+        <div class="card reveal">
+          <span class="card-icon">⚙️</span>
+          <h3>Sistemas de reservas</h3>
+          <p>Software de reservas (Local 1 dispositivo)
+          <p><em style="color: white;">$250.000</em></p>
+          </p>
+          <br>
+          <p>Software de reservas (Local 2 dispositivos)
+          <p><em style="color: white;">$280.000</em></p>
+          </p>
+          <br>
+           <p>Software de reservas en WEB (Local 2 dispositivos)
+          <p><em style="color: white;">$490.000</em></p>
+          </p>
+
+        </div>
+        
+
+        <div class="card reveal">
+          <span class="card-icon">📄</span>
+          <h3>Facturación Electrónica</h3>
+          <p>Integración legal y automatizada para el control total de tus ventas.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">🛒</span>
+          <h3>Tiendas Virtuales</h3>
+          <p>Plataformas E-commerce escalables con pasarelas de pago seguras.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">🎯</span>
+          <h3>Landing Pages</h3>
+          <p>Páginas de aterrizaje de alto impacto enfocadas 100% en conversión.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">📅</span>
+          <h3>Sistemas de Reservas</h3>
+          <p>Gestión inteligente de citas y agendas para tu negocio o servicio.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">💻</span>
+          <h3>Sistemas POS</h3>
+          <p>Control eficiente de puntos de venta física y transacciones de caja.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
 
   <section id="contacto">
     <h2 class="reveal" style="font-size: 2.5rem;">Contacto Directo</h2>
@@ -343,8 +463,7 @@
       </a>
     </div>
 
-    <a href="mailto:juanpabloum25@gmail.com" class="main-email reveal">juanpabloum25@gmail.com</a>
-    <a href="mailto:Luisxxx103@gmail.com" class="main-email reveal">Luisxxx103@gmail.com</a>
+    <a href="mailto:snakedev2@gmail.com" class="main-email reveal">snakedev2@gmail.com</a>
   </section>
 
   <footer>
