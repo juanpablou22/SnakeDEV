@@ -13,7 +13,6 @@
     rel="stylesheet" />
 
 
-  <!-- ESTILOS -->
   <style>
     :root {
       --snake-green: #8cf76b;
@@ -118,7 +117,7 @@
 
     .precios {
       background: var(--bg-black);
-      min-height: 180vh;
+      min-height: 100vh;
       color: var(--text-white);
       padding: 0 5%;
       background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
@@ -271,9 +270,68 @@
       border-top: 1px solid #111;
     }
 
+    /* Estilos Título Membresías y Centrado SaaS */
+    .seccion-titulo-separador {
+      width: 100%;
+      text-align: center;
+      padding: 80px 0 40px 0;
+      display: block;
+    }
+
+    .titulo-membresias {
+      font-size: 3rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      margin: 0;
+    }
+
+    .seccion-contenido-saas {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 100px;
+    }
+
+    .seccion-contenido-saas .card {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    /* Estilos Acordeón */
+    .acordeon-saas {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .acordeon-saas summary {
+      cursor: pointer;
+      color: var(--snake-green);
+      font-weight: bold;
+      list-style: none;
+    }
+
+    .acordeon-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .precio-saas {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .precio-mantenimiento {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
     /* RESPONSIVE */
     @media(max-width:768px) {
-
       nav ul {
         position: absolute;
         top: 70px;
@@ -315,6 +373,9 @@
         text-align: center;
       }
 
+      .titulo-membresias {
+        font-size: 2rem;
+      }
     }
 
     /* REVEAL */
@@ -406,185 +467,116 @@
 
     </div>
   </section>
+
   <section id="Por que SnakeDev">
     <h2 class="reveal" style="font-size: 2.5rem; text-align: center;">⚡ <span>¿Por qué SnakeDev?</span></h2>
     <p style="max-width: 600px; margin: 0 auto; text-align: center;">
-      En un ecosistema digital saturado,la velocidad y la precisión son nuestro veneno. Nos especializamos en crear
+      En un ecosistema digital saturado, la velocidad y la precisión son nuestro veneno. Nos especializamos en crear
       sistemas que no solo funcionan, sino que están optimizados para la conversión, estabilidad y escalabilidad a
       futuro.
     </p>
-
-    <br>
-    <br>
-    <br>
   </section>
 
-  <!-- SECTION DE PRECIOS CON TITULOS Y SUS RESPECTIVA INFORMACION POR CARD -->
+  <section class="precios" id="precios">
+    <div style="max-width: 1200px; margin: auto; text-align: center;">
+      <h1 class="servicios reveal">Nuestros Servicios de <em>Snake</em> para tu Negocio.</h1>
+      <br><br>
 
-  <section style="place-items: center; " class="precios" id="precios">
-    <div style="max-width: 900px;">
-      <br>
-      <br>
-      <h1 class="servicios">Nuestros Servicios de <em>Snake</em> para tu Negocio.</h1>
-      <br>
-      <!-- Lista de Card con estilo propio -->
       <div class="services-grid">
-
-        <!-- CARD DE PRECIOS DE PAGINAS WEB -->
-
         <div class="card reveal">
           <span class="card-icon">🌐</span>
           <h3>Páginas Web</h3>
-          <hr>
-          <br>
-          <p>- PAGINA WEB basico <em style="color: white;">$400.000</em> </p>
-          <br>
-          <p>- PAGINA WEB PROFESSIONAL <em style="color: white;">$800.000</em></p>
-          <br>
+          <hr><br>
+          <p>- PAGINA WEB basico <em style="color: white;">$400.000</em> </p><br>
+          <p>- PAGINA WEB PROFESSIONAL <em style="color: white;">$800.000</em></p><br>
           <P>- PAGINA WEB PROFESSIONAL<Em style="color: white;"> $1.000.000</Em> </P>
         </div>
-        <!-- CARD DE SISTEMAS DE RESERVAS CON ESTILO DE LETRA EN LA MISMA CLASE -->
 
         <div class="card reveal">
           <span class="card-icon">📅</span>
           <h3>Sistemas de reservas</h3>
-          <hr>
-          <br>
-          <p>Software de reservas (Local 1 dispositivo)
-          <p><em style="color: white;">$250.000</em></p>
-          </p>
-          <br>
-          <p>Software de reservas (Local 2 dispositivos)
-          <p><em style="color: white;">$280.000</em></p>
-          </p>
-          <br>
-          <p>Software de reservas en WEB (Local 2 dispositivos)
-          <p><em style="color: white;">$490.000</em></p>
-          </p>
-
+          <hr><br>
+          <p>Software de reservas (Local 1 dispositivo) <em style="color: white;">$250.000</em></p><br>
+          <p>Software de reservas (Local 2 dispositivos) <em style="color: white;">$280.000</em></p><br>
+          <p>Software de reservas en WEB <em style="color: white;">$490.000</em></p>
         </div>
-        <!-- Termina seccionn de reservas  -->
 
         <div class="card reveal">
           <span class="card-icon">📄</span>
-          <h3 class="card-title">Sistemas POS</h3>
-
-          <p class="card-description">
-            Integración legal y automatizada para el control total de tus ventas.
-          </p>
-
-          <hr>
-          <br>
-          <!-- ESPACIADO DE LINEAS CON HR Y BR PARA TEXTOS -->
-
-          <p class="card-description">
-            <strong>Incluye (2 usuarios locales):</strong>
-            <br>
-            - Registro de ventas y pagos
-            <br>
-            - Inventario en tiempo real
-            <br>
-            - Facturación electrónica
-            <br>
-            - Control de caja
-            <br>
-            - Gestión de clientes
-            <br>
+          <h3>Sistemas POS</h3>
+          <p>Integración legal y automatizada para el control total de tus ventas.</p>
+          <hr><br>
+          <p style="text-align: left; font-size: 0.8rem;">
+            <strong>Incluye (2 usuarios locales):</strong><br>
+            - Registro de ventas y pagos<br>
+            - Inventario en tiempo real<br>
+            - Facturación electrónica<br>
+            - Control de caja<br>
+            - Gestión de clientes<br>
             - Gestión de empleados
-          </p>
-          <br>
-
-          <p class="card-price">
-            <em style="color: white;">$470.000</em>
-          </p>
+          </p><br>
+          <p><em style="color: white; font-size: 1.2rem;">$470.000</em></p>
         </div>
-        <!-- TERMINA CARTA DE SISTEMAS POS LINEA  411 A 443 -->
-        <!-- Se añaden etiquetas como br y HR Para el espaciado en textos y lineas  -->
 
-        <!-- CARTA DE LANDING PAGES -->
         <div class="card reveal">
           <span class="card-icon">🎯</span>
-          <h3 class="card-title">Landing Pages</h3>
-
-          <p class="card-description">
-            <strong>Avanzada:</strong> Página informativa diseñada para destacar tu negocio y atraer más clientes a tu
-            entorno digital.
-            Incluye un espacio interactivo y un método de contacto rápido para facilitar la comunicación avanzada.
-          </p>
-          <p style="color: white;" class="card-price">
-            <em>$170.000</em>
-          </p>
-          <br>
-
-          <hr>
-          <br>
-
-          <p class="card-description">
-            <strong>Básica:</strong> Página informativa interactiva con 4 secciones esenciales, ideal para el alcance de
-            negocios o como tarjeta digital.
-            Diseñada para ser clara y práctica, sin necesidad de modificaciones.
-          </p>
-          <p style="color: white;" class="card-price">
-            <em>$120.000</em>
-          </p>
+          <h3>Landing Pages</h3>
+          <p><strong>Avanzada:</strong> Interactiva, método de contacto rápido.</p>
+          <p><em style="color: white;">$170.000</em></p>
+          <hr><br>
+          <p><strong>Básica:</strong> 4 secciones esenciales, tarjeta digital.</p>
+          <p><em style="color: white;">$120.000</em></p>
         </div>
-       <div class="card reveal">
-    <span class="card-icon">👨‍💻<alt=""></span>
-    <h3>Sistemas SaaS</h3>
-    <p>Software de gestión integral para pequeñas y medianas empresas.</p>
+      </div> <div class="seccion-titulo-separador reveal">
+        <h2 class="titulo-membresias">Membresías</h2>
+      </div>
 
-    <details class="acordeon-saas">
-        <summary>Ver beneficios de la suscripción</summary>
-        <div class="acordeon-content">
-            <ul>
+      <div class="seccion-contenido-saas">
+        <div class="card reveal">
+          <span class="card-icon">👩‍💻</span>
+          <h3>Sistemas SaaS</h3>
+          <p>Software de gestión integral para pequeñas y medianas empresas.</p>
+
+          <details class="acordeon-saas">
+            <summary>Ver beneficios de la suscripción</summary>
+            <div class="acordeon-content">
+              <ul>
                 <li><strong>Acceso Cloud:</strong> Gestión remota total.</li>
                 <li><strong>Soporte:</strong> Asistencia técnica incluida.</li>
                 <li><strong>Actualizaciones:</strong> Mejoras constantes.</li>
                 <li><strong>Seguridad:</strong> Backups automáticos.</li>
-            </ul>
-            <p class="precio-saas">$60.000 / mes</p>
-            <p class="precio-mantenimiento">Mantenimiento a la base de datos: $50.000</p>
+              </ul>
+              <p class="precio-saas">$60.000 / mes</p>
+              <p class="precio-mantenimiento">Mantenimiento de base de datos: $50.000</p>
+            </div>
+          </details>
         </div>
-    </details>
-</div>
-        <!-- Ultima carta de landing pages  -->
-
       </div>
+
+    </div>
   </section>
-
-
-  <!-- TERMINA SECCION DE SERVICIOS  -->
-
-
-
-  <!-- INICIA SECCION DE CONTACTO DIRECTOS -->
-
 
   <section id="contacto">
     <h2 class="reveal" style="font-size: 2.5rem;">Contacto Directo</h2>
     <div class="contact-grid">
-      <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev."
-        target="_blank" class="contact-card reveal">
+      <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo" target="_blank" class="contact-card reveal">
         <h4>Juan Pablo Urbano</h4>
         <p>Desarrollador Junior</p>
         <p>+57 324 564 0270</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
-      <a href="https://wa.me/573226849465?text=Hola%20Luis%20Fernando,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev."
-        target="_blank" class="contact-card reveal">
+      <a href="https://wa.me/573226849465?text=Hola%20Luis%20Fernando" target="_blank" class="contact-card reveal">
         <h4>Luis Fernando Jiménez</h4>
         <p>Desarrollador Junior</p>
         <p>+57 322 684 9465</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
-      <a href="https://www.instagram.com/snakedev.software?igsh=NjFjR1NWpp1Zmg0" target="_blank"
-        class="contact-card reveal">
+      <a href="https://www.instagram.com/snakedev.software" target="_blank" class="contact-card reveal">
         <h4>Instagram</h4>
         <p>SnakeDev Technology</p>
         <span style="font-size: 0.8rem; color: #555;">Click para ir a nuestro perfil</span>
       </a>
     </div>
-
     <a href="mailto:snakedev2@gmail.com" class="main-email reveal">snakedev2@gmail.com</a>
   </section>
 
