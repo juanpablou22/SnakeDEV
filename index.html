@@ -116,6 +116,14 @@
       background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
     }
 
+    .precios {
+      background: var(--bg-black);
+      min-height: 180vh;
+      color: var(--text-white);
+      padding: 0 5%;
+      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
+    }
+
     .hero-content {
       max-width: 800px;
     }
@@ -413,7 +421,7 @@
 
   <!-- SECTION DE PRECIOS CON TITULOS Y SUS RESPECTIVA INFORMACION POR CARD -->
 
-  <section style="place-items: center; " class="precios" href="#precios">
+  <section style="place-items: center; " class="precios" id="precios">
     <div style="max-width: 900px;">
       <br>
       <br>
@@ -520,6 +528,25 @@
             <em>$120.000</em>
           </p>
         </div>
+       <div class="card reveal">
+    <span class="card-icon"><img src="unnamed.jpg" alt=""></span>
+    <h3>Sistemas SaaS</h3>
+    <p>Software de gestión integral para pequeñas y medianas empresas.</p>
+
+    <details class="acordeon-saas">
+        <summary>Ver beneficios de la suscripción</summary>
+        <div class="acordeon-content">
+            <ul>
+                <li><strong>Acceso Cloud:</strong> Gestión remota total.</li>
+                <li><strong>Soporte:</strong> Asistencia técnica incluida.</li>
+                <li><strong>Actualizaciones:</strong> Mejoras constantes.</li>
+                <li><strong>Seguridad:</strong> Backups automáticos.</li>
+            </ul>
+            <p class="precio-saas">$60.000 / mes</p>
+            <p class="precio-mantenimiento">Mantenimiento a la base de datos: $50.000</p>
+        </div>
+    </details>
+</div>
         <!-- Ultima carta de landing pages  -->
 
       </div>
