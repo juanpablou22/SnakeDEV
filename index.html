@@ -11,6 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap"
     rel="stylesheet" />
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
 
 
   <style>
@@ -30,12 +32,9 @@
       padding: 0;
     }
 
-    /* Desplazamiento para navegacion interactiva */
     html {
       scroll-behavior: smooth;
     }
-
-
 
     body {
       font-family: 'Space Grotesk', sans-serif;
@@ -58,7 +57,6 @@
       background: rgba(5, 5, 5, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(140, 247, 107, 0.1);
-      z-index: 1000;
     }
 
     .logo {
@@ -66,6 +64,9 @@
       font-weight: 700;
       text-decoration: none;
       color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo span {
@@ -91,40 +92,13 @@
       color: var(--snake-green);
     }
 
-    .Menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-
-    .Menu-toggle span {
-      width: 25px;
-      height: 2px;
-      background: white;
-    }
-
-
+    /* Hero */
     #hero {
       min-height: 100vh;
-      background: var(--bg-black);
-      color: var(--text-white);
       display: flex;
       align-items: center;
       padding: 0 5%;
       background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
-    }
-
-    .precios {
-      background: var(--bg-black);
-      min-height: 100vh;
-      color: var(--text-white);
-      padding: 0 5%;
-      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
-    }
-
-    .hero-content {
-      max-width: 800px;
     }
 
     .hero-tag {
@@ -146,35 +120,10 @@
       color: var(--snake-green);
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 14px 28px;
-      border: 1px solid var(--snake-green);
-      color: var(--snake-green);
-      text-decoration: none;
-      font-weight: 700;
-      transition: .3s;
-    }
-
-    .cta:hover {
-      background: var(--snake-green);
-      color: black;
-      box-shadow: 0 0 15px var(--snake-green);
-    }
-
-    /* SECTIONS */
+    /* Sections */
     section {
       padding: 100px 5%;
     }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-    }
-
-    /* CARDS */
 
     .services-grid {
       display: grid;
@@ -196,6 +145,13 @@
       transform: translateY(-5px);
     }
 
+    /* Iconos Estilizados */
+    .card-icon {
+      color: var(--snake-green);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
     .card h3 {
       color: var(--snake-green);
       margin-bottom: 1rem;
@@ -209,19 +165,14 @@
       margin-bottom: .8rem;
     }
 
-    .price {
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-top: 1rem;
+    /* Precios */
+    .precios {
+      background: var(--bg-black);
+      min-height: 100vh;
+      background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
     }
 
-    .price-info {
-      font-size: .8rem;
-      color: #666;
-    }
-
-    /* CONTACT */
+    /* Contacto */
     #contacto {
       background: #080808;
       text-align: center;
@@ -243,6 +194,12 @@
       text-decoration: none;
       color: white;
       transition: .3s;
+    }
+
+    .contact-card i {
+      color: var(--snake-green);
+      margin-bottom: 10px;
+      display: block;
     }
 
     .contact-card:hover {
@@ -270,12 +227,11 @@
       border-top: 1px solid #111;
     }
 
-    /* Estilos Título Membresías y Centrado SaaS */
+    /* Estilos Título Membresías */
     .seccion-titulo-separador {
       width: 100%;
       text-align: center;
       padding: 80px 0 40px 0;
-      display: block;
     }
 
     .titulo-membresias {
@@ -283,7 +239,6 @@
       color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 8px;
-      margin: 0;
     }
 
     .seccion-contenido-saas {
@@ -293,92 +248,14 @@
       padding-bottom: 100px;
     }
 
-    .seccion-contenido-saas .card {
-      width: 100%;
-      max-width: 450px;
-    }
-
-    /* Estilos Acordeón */
-    .acordeon-saas {
-      margin-top: 15px;
-      text-align: center;
-    }
-
     .acordeon-saas summary {
       cursor: pointer;
       color: var(--snake-green);
       font-weight: bold;
       list-style: none;
+      margin-top: 15px;
     }
 
-    .acordeon-content ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-      display: inline-block;
-      text-align: left;
-    }
-
-    .precio-saas {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .precio-mantenimiento {
-      font-size: 0.85rem;
-      color: #888;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:768px) {
-      nav ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #111;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 2rem 0;
-        display: none;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      #hero {
-        text-align: center;
-        justify-content: center;
-      }
-
-      .hero-content {
-        max-width: 100%;
-      }
-
-      section {
-        padding: 80px 7%;
-      }
-
-      .card {
-        padding: 1.5rem;
-      }
-
-      .contact-card {
-        text-align: center;
-      }
-
-      .titulo-membresias {
-        font-size: 2rem;
-      }
-    }
-
-    /* REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
@@ -389,13 +266,25 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    @media(max-width:768px) {
+      nav ul {
+        display: none;
+      }
+      .titulo-membresias {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <nav>
-    <a href="#" class="logo">SNAKE<span>DEV🐍</span></a>
+    <a href="#" class="logo">
+      <i data-lucide="zap" style="color: var(--snake-green);"></i>
+      SNAKE<span>DEV</span>
+    </a>
     <ul>
       <li><a href="#servicios">Desarrollamos</a></li>
       <li><a href="#precios">Nuestros Servicios</a></li>
@@ -418,49 +307,49 @@
     <div class="services-grid">
 
       <div class="card reveal">
-        <span class="card-icon">🌐</span>
+        <i data-lucide="monitor" class="card-icon" size="32"></i>
         <h3>Páginas Web</h3>
         <p>Interfaces modernas, rápidas y optimizadas para todos los dispositivos.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">⚙️</span>
+        <i data-lucide="cpu" class="card-icon" size="32"></i>
         <h3>Sistemas Web</h3>
         <p>Software a medida basado en la nube para automatizar tus procesos.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">📄</span>
+        <i data-lucide="file-text" class="card-icon" size="32"></i>
         <h3>Facturación Electrónica</h3>
         <p>Integración legal y automatizada para el control total de tus ventas.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">🛒</span>
+        <i data-lucide="shopping-cart" class="card-icon" size="32"></i>
         <h3>Tiendas Virtuales</h3>
         <p>Plataformas E-commerce escalables con pasarelas de pago seguras.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">🎯</span>
+        <i data-lucide="target" class="card-icon" size="32"></i>
         <h3>Landing Pages</h3>
         <p>Páginas de aterrizaje de alto impacto enfocadas 100% en conversión.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">📅</span>
+        <i data-lucide="calendar" class="card-icon" size="32"></i>
         <h3>Sistemas de Reservas</h3>
         <p>Gestión inteligente de citas y agendas para tu negocio o servicio.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">💻</span>
+        <i data-lucide="tablet" class="card-icon" size="32"></i>
         <h3>Sistemas POS</h3>
         <p>Control eficiente de puntos de venta física y transacciones de caja.</p>
       </div>
 
       <div class="card reveal">
-        <span class="card-icon">📦</span>
+        <i data-lucide="package" class="card-icon" size="32"></i>
         <h3>Sistemas de Inventario</h3>
         <p>Control exacto de stock, entradas y salidas en tiempo real.</p>
       </div>
@@ -468,9 +357,12 @@
     </div>
   </section>
 
-  <section id="Por que SnakeDev">
-    <h2 class="reveal" style="font-size: 2.5rem; text-align: center;">⚡ <span>¿Por qué SnakeDev?</span></h2>
-    <p style="max-width: 600px; margin: 0 auto; text-align: center;">
+  <section id="Por-que-SnakeDev">
+    <h2 class="reveal" style="font-size: 2.5rem; text-align: center;">
+      <i data-lucide="trending-up" style="display: inline-block; vertical-align: middle;"></i> 
+      <span>¿Por qué SnakeDev?</span>
+    </h2>
+    <p style="max-width: 600px; margin: 20px auto; text-align: center;">
       En un ecosistema digital saturado, la velocidad y la precisión son nuestro veneno. Nos especializamos en crear
       sistemas que no solo funcionan, sino que están optimizados para la conversión, estabilidad y escalabilidad a
       futuro.
@@ -484,7 +376,7 @@
 
       <div class="services-grid">
         <div class="card reveal">
-          <span class="card-icon">🌐</span>
+          <i data-lucide="globe" class="card-icon"></i>
           <h3>Páginas Web</h3>
           <hr><br>
           <p>- PAGINA WEB basico <em style="color: white;">$400.000</em> </p><br>
@@ -493,7 +385,7 @@
         </div>
 
         <div class="card reveal">
-          <span class="card-icon">📅</span>
+          <i data-lucide="calendar-check" class="card-icon"></i>
           <h3>Sistemas de reservas</h3>
           <hr><br>
           <p>Software de reservas (Local 1 dispositivo) <em style="color: white;">$250.000</em></p><br>
@@ -502,7 +394,7 @@
         </div>
 
         <div class="card reveal">
-          <span class="card-icon">📄</span>
+          <i data-lucide="layers" class="card-icon"></i>
           <h3>Sistemas POS</h3>
           <p>Integración legal y automatizada para el control total de tus ventas.</p>
           <hr><br>
@@ -515,36 +407,38 @@
             - Gestión de clientes<br>
             - Gestión de empleados
           </p><br>
-          <p><em style="color: white; font-size: 1.2rem;">$470.000</em></p>
+          <p><em style="color: white; font-size: 1.2rem;">$500.000</em></p>
         </div>
 
         <div class="card reveal">
-          <span class="card-icon">🎯</span>
+          <i data-lucide="mouse-pointer-2" class="card-icon"></i>
           <h3>Landing Pages</h3>
           <p><strong>Avanzada:</strong> Interactiva, método de contacto rápido.</p>
-          <p><em style="color: white;">$170.000</em></p>
+          <p><em style="color: white;">$300.000</em></p>
           <hr><br>
           <p><strong>Básica:</strong> 4 secciones esenciales, tarjeta digital.</p>
-          <p><em style="color: white;">$120.000</em></p>
+          <p><em style="color: white;">$200.000</em></p>
         </div>
-      </div> <div class="seccion-titulo-separador reveal">
+      </div> 
+
+      <div class="seccion-titulo-separador reveal">
         <h2 class="titulo-membresias">Membresías</h2>
       </div>
 
       <div class="seccion-contenido-saas">
         <div class="card reveal">
-          <span class="card-icon">👩‍💻</span>
+          <i data-lucide="cloud" class="card-icon"></i>
           <h3>Sistemas SaaS</h3>
           <p>Software de gestión integral para pequeñas y medianas empresas.</p>
 
           <details class="acordeon-saas">
             <summary>Ver beneficios de la suscripción</summary>
             <div class="acordeon-content">
-              <ul>
-                <li><strong>Acceso Cloud:</strong> Gestión remota total.</li>
-                <li><strong>Soporte:</strong> Asistencia técnica incluida.</li>
-                <li><strong>Actualizaciones:</strong> Mejoras constantes.</li>
-                <li><strong>Seguridad:</strong> Backups automáticos.</li>
+              <ul style="list-style: none; text-align: left; padding: 15px 0;">
+                <li><i data-lucide="check" size="14"></i> <strong>Acceso Cloud:</strong> Gestión remota total.</li>
+                <li><i data-lucide="check" size="14"></i> <strong>Soporte:</strong> Asistencia técnica incluida.</li>
+                <li><i data-lucide="check" size="14"></i> <strong>Actualizaciones:</strong> Mejoras constantes.</li>
+                <li><i data-lucide="check" size="14"></i> <strong>Seguridad:</strong> Backups automáticos.</li>
               </ul>
               <p class="precio-saas">$60.000 / mes</p>
               <p class="precio-mantenimiento">Mantenimiento de base de datos: $50.000</p>
@@ -560,24 +454,30 @@
     <h2 class="reveal" style="font-size: 2.5rem;">Contacto Directo</h2>
     <div class="contact-grid">
       <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo" target="_blank" class="contact-card reveal">
+        <i data-lucide="message-circle"></i>
         <h4>Juan Pablo Urbano</h4>
         <p>Desarrollador Junior</p>
         <p>+57 324 564 0270</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
       <a href="https://wa.me/573226849465?text=Hola%20Luis%20Fernando" target="_blank" class="contact-card reveal">
+        <i data-lucide="message-circle"></i>
         <h4>Luis Fernando Jiménez</h4>
         <p>Desarrollador Junior</p>
         <p>+57 322 684 9465</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
       <a href="https://www.instagram.com/snakedev.software" target="_blank" class="contact-card reveal">
+        <i data-lucide="instagram"></i>
         <h4>Instagram</h4>
         <p>SnakeDev Technology</p>
         <span style="font-size: 0.8rem; color: #555;">Click para ir a nuestro perfil</span>
       </a>
     </div>
-    <a href="mailto:snakedev2@gmail.com" class="main-email reveal">snakedev2@gmail.com</a>
+    <a href="mailto:snakedev2@gmail.com" class="main-email reveal">
+      <i data-lucide="mail" style="display: inline-block; vertical-align: middle;"></i> 
+      snakedev2@gmail.com
+    </a>
   </section>
 
   <footer>
@@ -585,6 +485,9 @@
   </footer>
 
   <script>
+    // Inicializar Iconos
+    lucide.createIcons();
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
